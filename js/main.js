@@ -22,7 +22,7 @@ const eta = parseInt(prompt("inserisci la tua eta"));
 let totale = prezzoAlKm * km ;
 let sconto = 0 ;
 const contenuto = document.getElementById("container");
-errore = false ;
+let errore = false ;
 
 
 
@@ -51,7 +51,7 @@ totale = totale.toFixed(2);
 
 if(!errore) 
     contenuto.innerHTML = `<h1>Il prezzo totale del biglietto è di : </h1>
-    <span> ${totale} </span> <br> 
+    <span id="totale"> ${totale}€ </span> <br> 
     <p> Ecco un recap dei dati inseriti </p>
         <ul>
             <li>Chilometri da percorrere : ${km}</li>

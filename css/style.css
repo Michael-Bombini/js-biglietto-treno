@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {list-style-type: none;}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+
+
+#container {
+    text-align: center;
+}
+
+
+#totale {
+    font-size: 2rem;
+    font-weight: bold;
+    
+
+}
