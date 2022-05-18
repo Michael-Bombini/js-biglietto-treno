@@ -51,8 +51,15 @@ totale = totale.toFixed(2);
 
 if(!errore) 
     contenuto.innerHTML = `<h1>Il prezzo totale del biglietto è di : </h1>
-    <span> ${totale} </span> ` ;
+    <span> ${totale} </span> <br> 
+    <p> Ecco un recap dei dati inseriti </p>
+        <ul>
+            <li>Chilometri da percorrere : ${km}</li>
+            <li>Eta inserita : ${eta}</li>
+            <li>Prezzo totale da pagare : ${totale}</li>
+        </ul>
+    ` ;
 else 
     contenuto.innerHTML = `<h1 style="color:red;">ATTENZIONE HAI INSERITO 
-    DEI DATI ERRATI !!! </h1> `
+    DEI DATI ERRATI !!! </h1>    `
 
