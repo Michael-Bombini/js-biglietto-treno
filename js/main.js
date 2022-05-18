@@ -29,24 +29,28 @@ const minKm = 10 ;
 const maxKm = 200; 
 
 
-if(isNaN(eta) || isNaN(km)) 
+if(isNaN(eta) || isNaN(km)){
    errore = true;
+}
 
-else if(km < 0)
+else if(km < 0){
     errore = true;
+}
 
 else if (km < minKm || km > maxKm){
     alert("i kilometri inseriti sono minori di 10 o maggiori di 200");
     errore = true ;
-}
+    }
 
 else {
 
-if(eta < 18 ) //strettamente minore di 18
+if(eta < 18 ){ //strettamente minore di 18
     sconto = (km * prezzoAlKm * 20) / 100;
- 
-else if (eta > 65 ) //strettamente maggiore di 65
+}
+
+else if (eta > 65 ){ //strettamente maggiore di 65
     sconto = (km * prezzoAlKm * 40) / 100;
+}
 
 /*
 lo sconto lo calcolo alla fine in quanto se l'utente non è compreso 
@@ -60,7 +64,7 @@ totale = totale.toFixed(2);
 }
 
 
-if(!errore) 
+if(!errore){
     contenuto.innerHTML = `<h1>Il prezzo totale del biglietto è di : </h1>
     <span id="totale"> ${totale}€ </span> <br> 
     <p> Ecco un recap dei dati inseriti </p>
@@ -70,7 +74,8 @@ if(!errore)
             <li>Prezzo totale da pagare : ${totale}</li>
         </ul>
     ` ;
-else 
+}
+else{
     contenuto.innerHTML = `<h1 style="color:red;">ATTENZIONE HAI INSERITO 
     DEI DATI ERRATI !!! </h1>    `
-
+}
