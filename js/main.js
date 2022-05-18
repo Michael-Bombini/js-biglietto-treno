@@ -17,17 +17,28 @@ posso inserire un minimo / massimo di km possibili?
 */
 
 const prezzoAlKm = 0.21;
-const km = parseInt(prompt("Inserisci il numero di kilometri da percorrere"));
+const km = parseInt(prompt("Inserisci il numero di kilometri da percorrere" +
+                            "\n" + "Ricorda minimo 10 o massimo 200 km"));
 const eta = parseInt(prompt("inserisci la tua eta"));
 let totale = prezzoAlKm * km ;
 let sconto = 0 ;
 const contenuto = document.getElementById("container");
 let errore = false ;
 
+const minKm = 10 ;
+const maxKm = 200; 
 
 
 if(isNaN(eta) || isNaN(km)) 
    errore = true;
+
+else if(km < 0)
+    errore = true;
+
+else if (km < minKm || km > maxKm){
+    alert("i kilometri inseriti sono minori di 10 o maggiori di 200");
+    errore = true ;
+}
 
 else {
 
