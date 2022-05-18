@@ -21,6 +21,7 @@ const km = parseInt(prompt("Inserisci il numero di kilometri da percorrere"));
 const eta = parseInt(prompt("inserisci la tua eta"));
 let totale = prezzoAlKm * km ;
 let sconto = 0 ;
+const contenuto = document.getElementById("container");
 
 if(eta < 18 ) //strettamente minore di 18
     sconto = (km * prezzoAlKm * 20) / 100;
@@ -36,5 +37,7 @@ sarà calcolato.
 */
 totale -= sconto ;  
 
+totale = totale.toFixed(2);
 
-alert(totale);
+contenuto.innerHTML = `<h1>Il prezzo totale del biglietto è di : </h1>
+ <span> ${totale} </span> ` ;
