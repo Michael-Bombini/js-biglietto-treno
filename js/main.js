@@ -22,6 +22,14 @@ const eta = parseInt(prompt("inserisci la tua eta"));
 let totale = prezzoAlKm * km ;
 let sconto = 0 ;
 const contenuto = document.getElementById("container");
+errore = false ;
+
+
+
+if(isNaN(eta) || isNaN(km)) 
+   errore = true;
+
+else {
 
 if(eta < 18 ) //strettamente minore di 18
     sconto = (km * prezzoAlKm * 20) / 100;
@@ -38,6 +46,13 @@ sarà calcolato.
 totale -= sconto ;  
 
 totale = totale.toFixed(2);
+}
 
-contenuto.innerHTML = `<h1>Il prezzo totale del biglietto è di : </h1>
- <span> ${totale} </span> ` ;
+
+if(!errore) 
+    contenuto.innerHTML = `<h1>Il prezzo totale del biglietto è di : </h1>
+    <span> ${totale} </span> ` ;
+else 
+    contenuto.innerHTML = `<h1 style="color:red;">ATTENZIONE HAI INSERITO 
+    DEI DATI ERRATI !!! </h1> `
+
